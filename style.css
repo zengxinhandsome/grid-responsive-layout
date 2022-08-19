@@ -1,0 +1,158 @@
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+body {
+  margin: 30px;
+  background-color: #ccc;
+}
+
+.btn {
+  background: var(--dark);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+.wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+/* nav */
+
+.nav > ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  text-align: center;
+  gap: 20px;
+}
+
+.nav > ul a {
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--dark);
+  text-align: center;
+  display: block;
+  box-shadow: var(--shadow);
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.nav > ul a:hover {
+  background-color: var(--dark);
+  color: var(--primary);
+}
+
+/* top container */
+
+.top-container {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+.showcase {
+  grid-area: showcase;
+  background: url(https://image.ibb.co/kYJK8x/showcase.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  color: var(--light);
+  padding: 2rem;
+}
+
+.showcase h1 {
+  font-size: 4rem;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.top-box {
+  background-color: var(--primary);
+  /* display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly; */
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 1.5rem;
+}
+
+.top-box .price {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.top-box-a {
+  grid-area: top-box-a;
+}
+
+.top-box-b {
+  grid-area: top-box-b;
+}
+
+/* boxes */
+
+.boxes {
+  display: grid;
+  /* grid-template-columns: repeat(4, auto); */
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  gap: 20px;
+}
+
+.boxes .box {
+  background: var(--primary);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+/* info */
+
+.info {
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+}
+
+.info p {
+  margin: 20px 0 40px 0;
+}
+
