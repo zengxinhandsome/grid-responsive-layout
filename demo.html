@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid-template-areas demo</title>
+    <style>
+      .wrapper {
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+          'box-a box-a box-a'
+          'box-b box-b box-c'
+          'box-d box-e box-f';
+      }
+
+      .box-a {
+        grid-area: box-a;
+      }
+      .box-b {
+        grid-area: box-b;
+      }
+      .box-c {
+        grid-area: box-c;
+      }
+      .box-d {
+        grid-area: box-d;
+      }
+      .box-e {
+        grid-area: box-e;
+      }
+      .box-f {
+        grid-area: box-f;
+      }
+
+      .wrapper .box {
+        font-size: 2rem;
+        background-color: #444;
+        color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .wrapper {
+          display: grid;
+          gap: 20px;
+          grid-template-areas:
+            'box-a box-a'
+            'box-b box-b'
+            'box-c box-d'
+            'box-e box-f';
+        }
+      }
+
+      @media only screen and (max-width: 400px) {
+        .wrapper {
+          display: grid;
+          gap: 20px;
+          grid-template-areas:
+            'box-a'
+            'box-b'
+            'box-c'
+            'box-d'
+            'box-e'
+            'box-f';
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box box-a">box-a</div>
+      <div class="box box-b">box-b</div>
+      <div class="box box-c">box-c</div>
+      <div class="box box-d">box-d</div>
+      <div class="box box-e">box-e</div>
+      <div class="box box-f">box-f</div>
+    </div>
+  </body>
+</html>
+
